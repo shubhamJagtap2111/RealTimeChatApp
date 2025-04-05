@@ -1,0 +1,23 @@
+# Stage 1: Build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+
+WORKDIR /app
+
+# Copy solution and project files
+COPY RealTimeChatAPI.sln ./
+COPY RealTimeChatAPI/*.csproj ./RealTimeChatAPI/
+
+# Restore dependencies
+RUN dotnet restore
+
+# Copy everything else and build
+COPY . .
+RUN dotnet publish RealTimeChatAPI -c Release -o /out
+
+# Stage 2: Runtime
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+
+WORKDIR /app
+COPY --from=build /out .
+
+ENTRYPOINT ["dotnet", "RealTimeChatAPI.dll"]
