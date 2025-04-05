@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "RealTimeChatAPI.Controllers.ChatController",
+    "Method": "GetHistory",
+    "RelativePath": "Chat/history",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

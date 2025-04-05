@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "PQfn1GrYOGT88XKyzHJXfAavR3iebcqoAdgv0OKQRQo=",
+  "Source": "RealTimeChatAPI",
+  "BasePath": "_content/RealTimeChatAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
